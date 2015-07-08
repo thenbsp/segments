@@ -4,7 +4,7 @@
  * 微信新版 JS SDK 配置起来太麻烦（要开启 SESSION）
  * Created by thenbsp (thenbsp@gmail.com)
  */
-class Wechat_JSSDK
+class WechatJSSDK
 {
     /**
      * 公众号 APP ID
