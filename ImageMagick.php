@@ -1,9 +1,8 @@
 <?php
 
 /**
- * 图像操作类，主要基于 PHP Imagick 扩展
- * Created by thenbsp
- * Email: thenbsp@gmail.com
+ * 图像操作类（可以操作 GIF），主要基于 PHP Imagick 扩展
+ * Created by thenbsp (thenbsp@gmail.com)
  */
 class ImageMagick {
 
