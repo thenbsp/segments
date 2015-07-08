@@ -1,5 +1,7 @@
 /**
  * GET/POST/PUT/DELETE Request
+ * Created by thenbsp (thenbsp@gmail.com)
+ * 
  * @param  string   method   request method
  * @param  string   url      request url
  * @param  object   data     request data
