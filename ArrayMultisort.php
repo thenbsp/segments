@@ -10,10 +10,11 @@ function arrayMultisort(&$array, $sortBy, $sortOrder = SORT_DESC)
         return;
     }
 
-    $temp = array();
+    $tmp = array();
     foreach ($array AS $k=>$v) {
-        $temp[$k] = (gettype($v) === 'object') ? $v->$sortBy : $v[$sortBy];
+        $tmp[$k] = (gettype($v) === 'object') ? $v->$sortBy : $v[$sortBy];
     }
 
-    array_multisort($temp, $sortOrder, $array);
+    array_multisort($tmp, $sortOrder, $array);
+    unset($tmp);
 }
