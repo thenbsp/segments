@@ -56,7 +56,7 @@ class KernelListener
             return;
         }
 
-        // 排除静态文件
+        // 排除资源文件
         if( preg_match("^/(_(profiler|wdt)|css|images|js)/^", $request->getPathInfo()) ) {
             return;
         }
