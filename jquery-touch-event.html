@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>jQuery Touch Event</title>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+$(function() {
+
+    // Body 元素
+    var body = $('body');
+    // 在这个元素上滑动
+    var demo = $('#demo');
+
+    // 记录每次手指按下时的 Y 轴坐标
+    var last;
+
+    // 同事监听 touchstart touchmove touchend 事件
+    $(document).on('touchstart touchmove touchend', function(event) {
+
+        // 阻止微信中页面上下拉动
+        event.preventDefault();
+
+        // 手指按下的元素
+        var target = $(event.target);
+
+        switch(event.type) {
+            /**
+             * 手指按下屏幕时
+             */
+            case 'touchstart':
+                // 手指按下时的 Y 轴坐标
+                last = event.originalEvent.touches[0];
+                console.log('touchstart');
+                break;
+            /**
+             * 手指在屏幕上移动距离与 touchstart 时超过 10px 时对算作 touchmove
+             */
+            case 'touchmove':
+
+                // 手指移动时的 Y 轴坐标
+                var current = event.originalEvent.touches[0]
+
+                // 如果是在 demo 元素滑动
+                if( target.is(demo) ) {
+
+                    // 检测移动 X 轴方向
+                    var directionX = (current.clientX < last.clientX) ? '左' :
+                        ((current.clientX === last.clientX) ? '垂直' : '右');
+                    // 检测移动 Y 轴方向
+                    var directionY = (current.clientY < last.clientY) ? '上' :
+                        ((current.clientY === last.clientY) ? '水平' : '下');
+
+                    body.prepend(directionX + '@' + directionY + '<br />');
+                }
+
+                console.log('touchmove');
+                break;
+            /**
+             * 手指离开屏幕时
+             */
+            case 'touchend':
+                console.log('touchend');
+                break;
+        }
+    });
+});
+</script>
+<style>
+#demo{ width:200px; height: 200px; background-color: #666; margin-left: -100px; margin-top: -100px; position: absolute; left: 50%; top: 50%; }
+</style>
+</head>
+<body ontouchstart="">
+
+<div id="demo"></div>
+
+</body>
+</html>
