@@ -7,6 +7,21 @@ use AppBundle\Entity\Product;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
+// cart.manager:
+//     class: %cart.manager.class%
+//         arguments:
+//             - @doctrine.orm.entity_manager
+//             - @session
+
+// $cart = $this->get('cart.manager');
+// $cart->hasProduct(Prodoct $product);
+// $cart->addProduct(Product $product, $quantity = 1);
+// $cart->removeProduct(Product $product);
+// $cart->getCount();
+// $cart->getTotal();
+// $cart->getTotalFormated();
+// $cart->getProducts(); // get product entities from cart
+
 class Cart
 {
     /**
