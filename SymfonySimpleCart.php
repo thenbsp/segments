@@ -2,6 +2,7 @@
 
 namespace AppBundle\Service;
 
+use AppBundle\Service\Util;
 use AppBundle\Entity\Product;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -9,7 +10,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 class Cart
 {
     /**
-     * Session bag
+     * Cart session bag
      */
     const CART = '_cart';
 
@@ -130,20 +131,19 @@ class Cart
      */
     public function getTotalFormated()
     {
-        return number_format($this->getTotal(), 2);
+        return Util::toCurrency($this->getTotal());
     }
 
     /**
-     * 清除购物车中的所有项目
+     * 销毁购物车中的所有项目
      */
-    public function clear()
+    public function destroy()
     {
         $this->session->remove(self::CART);
     }
 
     /**
-     * 获取 产品/数量 映射关系，因为产品信息太多，全都存在 Session 不太优雅
-     * 要获取购物车中的产品详细信息，请使用 $this->getProducts() 方法。
+     * 获取映射关系
      */
     protected function getMapping($default = array())
     {
