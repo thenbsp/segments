@@ -54,7 +54,7 @@ app/console doctrine:fixtures:load
 app/console assets:install web --symlink
 ```
 
-### 导出 FOSJsRoutingBundle 下的路由取 web 目录
+### 导出 FOSJsRoutingBundle 下的路由到 web 目录
 
 ```
 app/console fos:js-routing:dump
