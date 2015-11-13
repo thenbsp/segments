@@ -31,7 +31,12 @@ app/console doctrine:database:create
 app/console doctrine:generate:entities Acme/BlogBundle
 ```
 
-### 生成数据表
+// 生成数据表
+```
+app/console doctrine:schema:update --force
+```
+
+### 生成表单类型
 ```
 app/console generate:doctrine:form Acme/BlogBundle:Post
 ```
