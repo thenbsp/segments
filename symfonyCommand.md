@@ -25,15 +25,15 @@ app/console generate:controller --controller=Acme/BlogBundle:Post
 app/console doctrine:database:create
 ```
 
+### 生成数据表
+```
+app/console doctrine:schema:update --force
+```
+
 ### 生成实体对象 getter && setter
 
 ```
 app/console doctrine:generate:entities Acme/BlogBundle
-```
-
-// 生成数据表
-```
-app/console doctrine:schema:update --force
 ```
 
 ### 生成表单类型
