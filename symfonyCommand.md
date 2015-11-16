@@ -7,6 +7,12 @@
 app/console debug:container
 ```
 
+### 查看所有路由
+
+```
+app/console debug:router {routeName}
+```
+
 ### 生成 Bundle
 
 ```
