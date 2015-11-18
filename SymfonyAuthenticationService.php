@@ -43,7 +43,7 @@ class Authentication
     /**
      * 认证用户
      */
-    public function authenticate(User $user, $providerKey = 'app')
+    public function authenticate(User $user, $providerKey)
     {
         $authenticationToken = new UsernamePasswordToken($user, null, $providerKey, $user->getRoles());
         $authenticationEvent = new InteractiveLoginEvent($this->request, $authenticationToken);
