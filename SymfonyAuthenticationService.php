@@ -45,7 +45,7 @@ class Authentication
      */
     public function authenticate(User $user, $providerKey)
     {
-        $authenticationToken = new UsernamePasswordToken($user, null, $providerKey, $user->getRoles());
+        $authenticationToken = new UsernamePasswordToken($user, $user->getPassword(), $providerKey, $user->getRoles());
         $authenticationEvent = new InteractiveLoginEvent($this->request, $authenticationToken);
 
         $this->tokenStorage->setToken($authenticationToken);
@@ -55,7 +55,7 @@ class Authentication
     /**
      * 取消认证
      */
-    public function unauthenticate($invalidateSession = true)
+    public function unauthenticate($invalidateSession = false)
     {
         $this->tokenStorage->setToken();
 
