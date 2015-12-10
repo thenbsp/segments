@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- meta 区域 -->
+{% block meta %}
+<meta charset="utf-8" />
+{% endblock %}
+
+<!-- title 区域 -->
+{% block title %}
+<title>title</title>
+{% endblock %}
+
+<!-- stylesheets 区域 -->
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('bundles/app/css/stylesheets.css') }}" />
+{% endblock %}
+
+<!-- stylesheets 内联区域 -->
+{% block stylesheets_inpage %}{% endblock %}
+
+</head>
+<body>
+
+<!-- 自定义区域-->
+
+<!-- javascripts 区域 -->
+{% block javascripts %}
+<script src="{{ asset('bundles/app/js/javascripts.js') }}"></script>
+{% endblock %}
+
+<!-- javascripts_inpage 内联区域 -->
+{% block javascripts_inpage %}{% endblock %}
+
+</body>
+</html>
