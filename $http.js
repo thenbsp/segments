@@ -8,7 +8,7 @@
  * @param  function callback request callback
  * @param  string   type     data type
  */
-$.request = function(method, url, data, callback, type) {
+$http = function(method, url, data, callback, type) {
 
     var allows = ['GET', 'POST', 'PUT', 'DELETE'];
     var method = ($.inArray(method, allows) === -1) ? allows[0] : method;
@@ -28,21 +28,21 @@ $.request = function(method, url, data, callback, type) {
 }
 
 // get user by id
-$.request('GET', '/user/1', function(response) {
+$http('GET', '/user/1', function(response) {
     console.log(response.info);
 });
 
 // create user
-$.request('POST', '/user', function(response) {
+$http('POST', '/user', function(response) {
     console.log(response.info);
 });
 
 // edit user by id
-$.request('PUT', '/user/1', function(response) {
+$http('PUT', '/user/1', function(response) {
     console.log(response.info);
 });
 
 // delete user by id
-$.request('DELETE', '/user/1', function(response) {
+$http('DELETE', '/user/1', function(response) {
     console.log(response.info);
 });
