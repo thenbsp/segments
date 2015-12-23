@@ -6,20 +6,31 @@
 //     tags:
 //         - { name: kernel.event_subscriber }
 
+<?php
+
 namespace AppBundle\EventSubscriber;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\KernelEvents;
+use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent;
+use Symfony\Component\Templating\EngineInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Bundle\FrameworkBundle\Templating\TemplateReference;
 
 class TemplateSubscriber implements EventSubscriberInterface
 {
+    /**
+     * Symfony\Component\HttpKernel\KernelInterface
+     */
     protected $kernel;
+
+    /**
+     * Symfony\Component\Templating\EngineInterface
+     */
     protected $templating;
 
-    public function __construct($kernel, $templating)
+    public function __construct(KernelInterface $kernel, EngineInterface $templating)
     {
         $this->kernel       = $kernel;
         $this->templating   = $templating;
