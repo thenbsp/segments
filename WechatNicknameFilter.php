@@ -1,4 +1,4 @@
-<?
+<?php
 
 // 只负责过滤表情，不包括 HTML 符号
 public function setNickname($nickname)
