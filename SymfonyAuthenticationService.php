@@ -27,7 +27,7 @@ class Authentication
     /**
      * Symfony\Component\EventDispatcher\EventDispatcherInterface
      */
-    protected $eventDispatcher;
+    protected $dispatcher;
 
     /**
      * Symfony\Component\HttpFoundation\Request
@@ -43,7 +43,7 @@ class Authentication
         RequestStack $requestStack)
     {
         $this->tokenStorage     = $tokenStorage;
-        $this->eventDispatcher  = $eventDispatcher;
+        $this->dispatcher       = $eventDispatcher;
         $this->request          = $requestStack->getCurrentRequest();
     }
 
@@ -56,7 +56,7 @@ class Authentication
         $authenticationEvent = new InteractiveLoginEvent($this->request, $authenticationToken);
 
         $this->tokenStorage->setToken($authenticationToken);
-        $this->eventDispatcher->dispatch(SecurityEvents::INTERACTIVE_LOGIN, $authenticationEvent);
+        $this->dispatcher->dispatch(SecurityEvents::INTERACTIVE_LOGIN, $authenticationEvent);
     }
 
     /**
