@@ -1,5 +1,12 @@
 <?php
 
+// authentication:
+//     class: %authentication.class%
+//     arguments:
+//         - @security.token_storage
+//         - @event_dispatcher
+//         - @request_stack
+
 namespace AppBundle\Service;
 
 use AppBundle\Entity\User;
