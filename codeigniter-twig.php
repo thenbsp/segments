@@ -54,12 +54,12 @@ class Twig
      */
     public function addGlobal($key, $value = NULL)
     {
-        if( is_string($key) ) {
-            $this->_twig->addGlobal($key, $value);
-        } else {
+        if( is_array($key) ) {
             foreach( $key AS $k=>$v ) {
                 $this->addGlobal($k, $v);
             }
+        } else {
+            $this->_twig->addGlobal((string) $key, (string) $value);
         }
     }
 
@@ -68,12 +68,12 @@ class Twig
      */
     public function addFunction($function)
     {
-        if( is_string($function) ) {
-            $this->_twig->addFunction($function, new Twig_Function_Function($function));
-        } else {
+        if( is_array($function) ) {
             foreach( $function AS $v ) {
                 $this->addFunction($v);
             }
+        } else {
+            $this->_twig->addFunction((string) $function, new Twig_Filter_Function((string) $function));
         }
     }
 
@@ -82,12 +82,12 @@ class Twig
      */
     public function addFilter($filter)
     {
-        if( is_string($filter) ) {
-            $this->_twig->addFilter($filter, new Twig_Filter_Function($filter));
-        } else {
+        if( is_array($filter) ) {
             foreach( $filter AS $v ) {
-                $this->_addFilter($v);
+                $this->addFilter($v);
             }
+        } else {
+            $this->_twig->addFilter((string) $filter, new Twig_Filter_Function((string) $filter));
         }
     }
 }
