@@ -125,4 +125,5 @@ rm -rf ./var/sessions/dev;
 rm -rf ./var/sessions/prod;
 rm -rf ./var/logs/*.log;
 rm -rf ./web/bundles;
+bin/console assets:install web --symlink;
 ```
