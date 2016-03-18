@@ -124,4 +124,5 @@ rm -rf ./var/cache/prod;
 rm -rf ./var/sessions/dev;
 rm -rf ./var/sessions/prod;
 rm -rf ./var/logs/*.log;
+rm -rf ./web/bundles;
 ```
