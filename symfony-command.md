@@ -125,5 +125,10 @@ rm -rf ./var/sessions/dev;
 rm -rf ./var/sessions/prod;
 rm -rf ./var/logs/*.log;
 rm -rf ./web/bundles;
+
+chmod 0777 -R ./var/cache;
+chmod 0777 -R ./var/logs;
+chmod 0777 -R ./var/sessions;
+
 bin/console assets:install web --symlink;
 ```
