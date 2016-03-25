@@ -92,6 +92,7 @@ class Serializer
         }
         return (array) $result;
     }
+
     /**
      * check is json string
      */
@@ -99,6 +100,7 @@ class Serializer
     {
         return (@json_decode($data) !== null);
     }
+
     /**
      * check is xml string
      */
