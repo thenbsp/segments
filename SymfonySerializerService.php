@@ -1,4 +1,5 @@
-```php
+<?php
+
 $user = new User();
 $user->setOpenid('xxx');
 $user->setUnionid('xxx');
