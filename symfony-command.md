@@ -105,11 +105,11 @@ rm -rf ./var/sessions/prod;
 rm -rf ./var/logs/*.log;
 rm -rf ./web/bundles;
 
+bin/console assets:install web --symlink;
+
 chmod 0777 -R ./var/cache;
 chmod 0777 -R ./var/logs;
 chmod 0777 -R ./var/sessions;
-
-bin/console assets:install web --symlink;
 
 composer dump-autoload --optimize;
 ```
