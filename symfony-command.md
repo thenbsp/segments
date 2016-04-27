@@ -98,8 +98,8 @@ composer dump-autoload --optimize
 ### Rest
 
 ```
-rm -rf ./var/cache/dev;
-rm -rf ./var/cache/prod;
+rm -rf ./var/cache/dev/*;
+rm -rf ./var/cache/prod/*;
 rm -rf ./var/sessions/dev;
 rm -rf ./var/sessions/prod;
 rm -rf ./var/logs/*.log;
