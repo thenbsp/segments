@@ -43,7 +43,7 @@
 ### 视频消息
 
 ```
-// 没找到从哪里才能给公众号发视频
+// 始终没找到从哪里才能给公众号发视频，有知道的劳烦告诉一下
 ```
 
 ### 小视频消息
@@ -117,16 +117,30 @@
 </xml>
 ```
 
-### 扫描二维码关注事件
+### 扫描带参数的二维码关注事件
 
 ```
-// ...
+<xml>
+    <ToUserName><![CDATA[gh_08cb40357652]]></ToUserName>
+    <FromUserName><![CDATA[ob4npwpYsDT6CQGHRDl9U50V6-RE]]></FromUserName>
+    <CreateTime>1461942855</CreateTime>
+    <MsgType><![CDATA[event]]></MsgType>
+    <Event><![CDATA[subscribe]]></Event>
+    <EventKey><![CDATA[qrscene_1113]]></EventKey> <Ticket><![CDATA[gQEo7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL2pqbFJWV1hsb203YnF6X3Y4eFdyAAIEw3cjVwMEAAAbba==]]></Ticket>
+</xml>
 ```
 
-### 扫描二维码时已关注，直接进入会话事件
+### 扫描带参数的二维码时已关注，直接进入会话事件
 
 ```
-// ...
+<xml>
+    <ToUserName><![CDATA[gh_08cb40357652]]></ToUserName>
+    <FromUserName><![CDATA[ob4npwpYsDT6CQGHRDl9U50V6-RE]]></FromUserName>
+    <CreateTime>1461942905</CreateTime>
+    <MsgType><![CDATA[event]]></MsgType>
+    <Event><![CDATA[SCAN]]></Event>
+    <EventKey><![CDATA[1113]]></EventKey> <Ticket><![CDATA[gQEo7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL2pqbFJWV1hsb203YnF6X3Y4eFdyAAIEw3cjVwMEAAAbba==]]></Ticket>
+</xml>
 ```
 
 ### 上报地理位置事件
@@ -144,10 +158,17 @@
 </xml>
 ```
 
-### 自定义菜单点击收到消息事件
+### 自定义菜单点击拉取消息事件
 
 ```
-// ...
+<xml>
+    <ToUserName><![CDATA[gh_08cb40357652]]></ToUserName>
+    <FromUserName><![CDATA[ob4npwpYsDT6CQGHRDl9U50V6-RE]]></FromUserName>
+    <CreateTime>1461942774</CreateTime>
+    <MsgType><![CDATA[event]]></MsgType>
+    <Event><![CDATA[CLICK]]></Event>
+    <EventKey><![CDATA[key_1]]></EventKey>
+</xml>
 ```
 
 ### 自定义菜单跳转事件
