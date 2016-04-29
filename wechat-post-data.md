@@ -62,7 +62,7 @@
 
 ### 地里位置消息
 
-```php
+```
 <xml>
     <ToUserName><![CDATA[gh_08cb40357652]]></ToUserName>
     <FromUserName><![CDATA[ob4npwpYsDT6CQGHRDl9U50V6-RE]]></FromUserName>
