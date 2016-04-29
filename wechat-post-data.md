@@ -132,7 +132,16 @@
 ### 上报地理位置事件
 
 ```
-// ...
+<xml>
+    <ToUserName><![CDATA[gh_08cb40357652]]></ToUserName>
+    <FromUserName><![CDATA[ob4npwpYsDT6CQGHRDl9U50V6-RE]]></FromUserName>
+    <CreateTime>1461941811</CreateTime>
+    <MsgType><![CDATA[event]]></MsgType>
+    <Event><![CDATA[LOCATION]]></Event>
+    <Latitude>34.216242</Latitude>
+    <Longitude>102.105487</Longitude>
+    <Precision>2662.000000</Precision>
+</xml>
 ```
 
 ### 自定义菜单点击收到消息事件
