@@ -126,7 +126,8 @@
     <CreateTime>1461942855</CreateTime>
     <MsgType><![CDATA[event]]></MsgType>
     <Event><![CDATA[subscribe]]></Event>
-    <EventKey><![CDATA[qrscene_1113]]></EventKey> <Ticket><![CDATA[gQEo7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL2pqbFJWV1hsb203YnF6X3Y4eFdyAAIEw3cjVwMEAAAbba==]]></Ticket>
+    <EventKey><![CDATA[qrscene_1113]]></EventKey>
+    <Ticket><![CDATA[gQEo7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL2pqbFJWV1hsb203YnF6X3Y4eFdyAAIEw3cjVwMEAAAbba==]]></Ticket>
 </xml>
 ```
 
@@ -139,7 +140,8 @@
     <CreateTime>1461942905</CreateTime>
     <MsgType><![CDATA[event]]></MsgType>
     <Event><![CDATA[SCAN]]></Event>
-    <EventKey><![CDATA[1113]]></EventKey> <Ticket><![CDATA[gQEo7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL2pqbFJWV1hsb203YnF6X3Y4eFdyAAIEw3cjVwMEAAAbba==]]></Ticket>
+    <EventKey><![CDATA[1113]]></EventKey>
+    <Ticket><![CDATA[gQEo7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL2pqbFJWV1hsb203YnF6X3Y4eFdyAAIEw3cjVwMEAAAbba==]]></Ticket>
 </xml>
 ```
 
