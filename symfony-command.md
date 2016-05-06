@@ -98,17 +98,15 @@ composer dump-autoload --optimize
 ### Rest
 
 ```
-rm -rf ./var/cache/dev/*;
-rm -rf ./var/cache/prod/*;
-rm -rf ./var/sessions/dev;
-rm -rf ./var/sessions/prod;
-rm -rf ./var/logs/*.log;
+rm -rf ./var/logs/*;
+rm -rf ./var/cache/*;
+rm -rf ./var/sessions/*;
 rm -rf ./web/bundles;
 
 bin/console assets:install web --symlink;
 
-chmod 0777 -R ./var/cache;
 chmod 0777 -R ./var/logs;
+chmod 0777 -R ./var/cache;
 chmod 0777 -R ./var/sessions;
 
 composer dump-autoload --optimize;
