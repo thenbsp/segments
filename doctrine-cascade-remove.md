@@ -5,7 +5,7 @@ the entity on the inverse side is deleted when the owning side entity is. Even i
 - should be used on collection (so in OneToMany or ManyToMany relationship)
 - implementation in the ORM
 
-> a 和 b 是一对多关系，删除 a 一行记录时，b 相关的记录会被删除
+> a 和 b 是一对多关系，删除 a 一行记录时，则 b 相关的记录会被全部删除
 
 ### orphanRemoval=true
 
@@ -13,7 +13,7 @@ the entity on the inverse side is deleted when the owning side entity is AND it 
 
 - can be used with OneToOne, OnetoMany or ManyToMany
 
-> a 和 b 是一对多关系，在 a 实体中通过 a->removeXxx(b) 后，保存 a，则 b 记录中被 RemoveXxx(b) 部分会被删除
+> a 和 b 是一对多关系，在 a 侧通过 removeXxx(b) ，保存 a，则 b 记录中被 RemoveXxx(b) 部分会被删除
 
 ### onDelete="CASCADE"
 
