@@ -5,6 +5,8 @@ the entity on the inverse side is deleted when the owning side entity is. Even i
 - should be used on collection (so in OneToMany or ManyToMany relationship)
 - implementation in the ORM
 
+> a 和 b 是一对多关系，删除 a 一行记录时，b 相关的记录会被删除
+
 ### orphanRemoval=true
 
 the entity on the inverse side is deleted when the owning side entity is AND it is not connected to any other owning side entity anymore. (ref. doctrine official_doc - implementation in the ORM
