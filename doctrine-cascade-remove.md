@@ -13,6 +13,8 @@ the entity on the inverse side is deleted when the owning side entity is AND it 
 
 - can be used with OneToOne, OnetoMany or ManyToMany
 
+> a 和 b 是一对多关系，在 a 实体中通过 a->removeXxx(b) 后，保存 a，则 b 记录中被 RemoveXxx(b) 部分会被删除
+
 ### onDelete="CASCADE"
 
 this will add On Delete Cascade to the foreign key column in the database
