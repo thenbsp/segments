@@ -102,6 +102,9 @@ rm -rf ./var/logs/*;
 rm -rf ./var/cache/*;
 rm -rf ./var/sessions/*;
 rm -rf ./web/bundles;
+rm -rf ./web/js;
+rm -rf ./web/css;
+rm -rf ./web/images;
 
 chmod 0777 -R ./var/logs;
 chmod 0777 -R ./var/cache;
