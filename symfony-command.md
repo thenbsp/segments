@@ -95,7 +95,20 @@ bin/console assetic:dump --env=prod
 composer dump-autoload --optimize
 ```
 
-### Rest
+### Symfony2
+
+```
+rm -rf ./app/logs/*;
+rm -rf ./app/cache/*;
+rm -rf ./web/bundles;
+
+chmod 0777 -R ./app/logs;
+chmod 0777 -R ./app/cache;
+
+app/console assets:install web --symlink;
+```
+
+### Symfony3
 
 ```
 rm -rf ./var/logs/*;
