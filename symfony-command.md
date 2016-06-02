@@ -123,5 +123,5 @@ chmod 0777 -R ./var/logs;
 chmod 0777 -R ./var/cache;
 chmod 0777 -R ./var/sessions;
 
-bin/console assets:install web --symlink;
+php bin/console assets:install web --symlink;
 ```
