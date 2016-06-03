@@ -115,9 +115,9 @@ rm -rf ./var/logs/*;
 rm -rf ./var/cache/*;
 rm -rf ./var/sessions/*;
 rm -rf ./web/bundles;
-rm -rf ./web/js;
-rm -rf ./web/css;
 rm -rf ./web/images;
+rm -rf ./web/css;
+rm -rf ./web/js;
 
 php bin/console assets:install web;
 
