@@ -119,9 +119,10 @@ rm -rf ./web/js;
 rm -rf ./web/css;
 rm -rf ./web/images;
 
+php bin/console assets:install web;
+
 chmod 0777 -R ./var/logs;
 chmod 0777 -R ./var/cache;
 chmod 0777 -R ./var/sessions;
 
-php bin/console assets:install web --symlink;
 ```
