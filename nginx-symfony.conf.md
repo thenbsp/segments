@@ -1,4 +1,4 @@
-http://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html
+See: http://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html
 
 ```
 server {
