@@ -1,3 +1,4 @@
+```
 server {
     server_name     example.com;
     root            /var/www/path;
@@ -17,3 +18,4 @@ server {
         include fastcgi.conf;
     }
 }
+```
