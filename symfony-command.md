@@ -4,89 +4,89 @@
 ### 查看所有服务
 
 ```php
-bin/console debug:container
+php bin/console debug:container
 ```
 
 ### 查看所有路由
 
 ```php
-bin/console debug:router {routeName}
+php bin/console debug:router
 ```
 
 ### 查看所有事件
 
 ```php
-bin/console debug:event-dispatcher
+php bin/console debug:event-dispatcher
 ```
 
-### 调度指定事件
+### 触发指定事件
 
 ```php
-bin/console debug:event-dispatcher {eventName}
+php bin/console debug:event-dispatcher {eventName}
 ```
 
 ### 生成 Bundle
 
 ```php
-bin/console generate:bundle --namespace=Acme/BlogBundle
+php bin/console generate:bundle
 ```
 
 ### 生成 Controller
 
 ```php
-bin/console generate:controller --controller=Acme/BlogBundle:Post
+php bin/console generate:controller
 ```
 
 ### 新建数据库
 
 ```php
-bin/console doctrine:database:create
+php bin/console doctrine:database:create
 ```
 
 ### 生成数据表
 ```php
-bin/console doctrine:schema:update --force
+php bin/console doctrine:schema:update --force
 ```
 
-### 生成实体对象 getter && setter
+### 生成实体 getter && setter
 
 ```php
-bin/console doctrine:generate:entities Acme/BlogBundle
+php bin/console doctrine:generate:entities {bundleName}
 ```
 
-### 生成表单类型
+### 生成实体 form type
 ```php
-bin/console generate:doctrine:form Acme/BlogBundle:Post
+php bin/console generate:doctrine:form {bundleName:entityName}
 ```
 
 ### 根据已存在的数据表生成实体
 
 ```php
-bin/console doctrine:mapping:import --force AppBundle xml
+php bin/console doctrine:mapping:import --force {bundleName} {annotation|yml|xml}
 ```
 
-### 装载数据
+### 装载测试数据
 
 ```php
-bin/console doctrine:fixtures:load
+php bin/console doctrine:fixtures:load
 ```
 
 ### 创建静态资源的快捷方式到 web 目录
 
 ```php
-bin/console assets:install web --symlink
+php bin/console assets:install web --symlink
 ```
 
 ### 导出 FOSJsRoutingBundle 下的路由到 web 目录
 
 ```php
-app/console fos:js-routing:dump
+php bin/console fos:js-routing:dump
 ```
 
 ### 合并资原文件
 
 ```php
-bin/console assetic:dump --env=prod
+php bin/console assetic:dump --env=prod
 ```
 
 ### 优化自动加载
@@ -124,5 +124,4 @@ php bin/console assets:install web;
 chmod 0777 -R ./var/logs;
 chmod 0777 -R ./var/cache;
 chmod 0777 -R ./var/sessions;
-
 ```
