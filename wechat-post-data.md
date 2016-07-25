@@ -187,7 +187,7 @@
 </xml>
 ```
 
-### 摇一摇事件
+### 摇一摇事件（单个设备）
 
 ```
 <xml>
@@ -208,3 +208,33 @@
 </xml>
 ```
 
+### 摇一摇事件（包含其它设备，AroundBeacons 为当前设备附近其它设备）
+
+```
+<xml>
+    <ToUserName><![CDATA[gh_aebb7a0b8381]]></ToUserName>
+    <FromUserName><![CDATA[oTH0BtLh1TK0vuMhLep7ioZc8Ij4]]></FromUserName>
+    <CreateTime>1469458322</CreateTime>
+    <MsgType><![CDATA[event]]></MsgType>
+    <Event><![CDATA[ShakearoundUserShake]]></Event>
+    <ChosenBeacon>
+        <Uuid><![CDATA[FDA50693-A4E2-4FB1-AFCF-C6EB07647825]]></Uuid>
+        <Major>10072</Major>
+        <Minor>38866</Minor>
+        <Distance>0.042282868197380835</Distance>
+        <Rssi>-43</Rssi>
+        <MeasurePower>-59</MeasurePower>
+    </ChosenBeacon>
+    <AroundBeacons>
+        <AroundBeacon>
+            <Uuid><![CDATA[FDA50693-A4E2-4FB1-AFCF-C6EB07647825]]></Uuid>
+            <Major>10072</Major>
+            <Minor>38826</Minor>
+            <Distance>0.053211640516155345</Distance>
+            <Rssi>-44</Rssi>
+            <MeasurePower>-59</MeasurePower>
+        </AroundBeacon>
+    </AroundBeacons>
+    <ChosenPageId>3741856</ChosenPageId>
+</xml>
+```
