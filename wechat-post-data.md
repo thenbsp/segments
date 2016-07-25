@@ -186,3 +186,25 @@
     <MenuId>403282101</MenuId>
 </xml>
 ```
+
+### 摇一摇事件
+
+```
+<xml>
+    <ToUserName><![CDATA[gh_aebb7a0b8381]]></ToUserName>
+    <FromUserName><![CDATA[oTH0BtLh1TK0vuMhLep7ioZc8Ij4]]></FromUserName>
+    <CreateTime>1469457470</CreateTime>
+    <MsgType><![CDATA[event]]></MsgType>
+    <Event><![CDATA[ShakearoundUserShake]]></Event>
+    <ChosenBeacon>
+        <Uuid><![CDATA[FDA50693-A4E2-4FB1-AFCF-C6EB07647825]]></Uuid>
+        <Major>10072</Major>
+        <Minor>38826</Minor>
+        <Distance>0.0666200602819741</Distance>
+        <Rssi>-45</Rssi>
+        <MeasurePower>-45</MeasurePower>
+    </ChosenBeacon>
+    <ChosenPageId>3755311</ChosenPageId>
+</xml>
+```
+
