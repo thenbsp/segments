@@ -114,7 +114,6 @@ app/console assets:install web --symlink;
 rm -rf ./var/logs/*;
 rm -rf ./var/cache/*;
 rm -rf ./var/sessions/*;
-rm -rf ./web/bundles;
 rm -rf ./web/images;
 rm -rf ./web/css;
 rm -rf ./web/js;
