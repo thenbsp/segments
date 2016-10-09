@@ -113,7 +113,6 @@ app/console assets:install web --symlink;
 ```
 rm -rf ./var/logs/*;
 rm -rf ./var/cache/*;
-rm -rf ./var/sessions/*;
 rm -rf ./web/images;
 rm -rf ./web/css;
 rm -rf ./web/js;
@@ -122,5 +121,4 @@ php bin/console assets:install web;
 
 chmod 0777 -R ./var/logs;
 chmod 0777 -R ./var/cache;
-chmod 0777 -R ./var/sessions;
 ```
