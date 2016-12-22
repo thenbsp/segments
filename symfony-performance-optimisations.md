@@ -1,6 +1,6 @@
 ### Symfony Performance Optimisations
 
-From: http://symfony.com/doc/current/performance.html(http://symfony.com/doc/current/performance.html)
+From: http://symfony.com/doc/current/performance.html
 
 默认情况下，PHP 的 OPcache 在字节码缓存中保存最多 2,000 个文件。此数字对于典型的 Symfony 应用程序来说太低，因此您应该使用 ``opcache.max_accelerated_files`` 配置选项设置更高的限制：
 
