@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ajax-cors-ie</title>
+</head>
+<body>
+<button>Click me!</button>
+<script src="//cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js"></script>
+<script src="//cdn.bootcss.com/json2/20150503/json2.min.js"></script>
+<script>
+$(function() {
+  $('button').on('click', function(event) {
+
+    var params = {
+      mobile: "18591974936",
+      password: "123456"
+    };
+
+    $.ajax({
+      url: 'http://api.test.haoke.qinxue100.com/app_dev.php/auth/login',
+      data: JSON.stringify(params),
+      type: 'POST',
+      contentType: 'text/plain'
+    })
+    .done(function(response) {
+        $('body').append('<p>'+JSON.stringify(response)+'</p>');
+    })
+    .fail(function(xhr, status, statusText) {
+        console.log(xhr, status, statusText);
+    });
+
+  });
+});
+</script>
+</body>
+</html>
